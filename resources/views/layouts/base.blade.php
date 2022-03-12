@@ -33,12 +33,16 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-6">
             <ul class="flex items-center">
                 <li>
-                    <a href="/">
-                        <x-eos-movie class="w-10 text-orange-500 hover:text-orange-600 transition ease-in-out duration-200"/>
+                    <a href="/" class="flex">
+                        <x-eos-movie
+                            class="w-10 text-teal-500 hover:text-teal-600 transition ease-in-out duration-200" />
+                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white ml-2">Movie
+                            App</span>
                     </a>
                 </li>
                 <li class="ml-16">
-                    <a href="{{ route('movies.index') }}" class="hover:text-gray-300 transition ease-in-out duration-200">Movies</a>
+                    <a href="{{ route('movies.index') }}"
+                        class="hover:text-gray-300 transition ease-in-out duration-200">Movies</a>
                 </li>
                 <li class="ml-10">
                     <a href="#" class="hover:text-gray-300 transition ease-in-out duration-200">TV Shows</a>
@@ -47,15 +51,8 @@
                     <a href="#" class="hover:text-gray-300 transition ease-in-out duration-200">Actors</a>
                 </li>
             </ul>
-            <div class="flex items-center">
-                <div class="relative">
-                    <input type="text"
-                        class="bg-gray-800 rounded-full text-sm w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline"
-                        placeholder="Search">
-                    <div class="absolute top-0">
-                        <x-eos-search class="fill-current w-4 text-gray-500 mt-2 ml-2" />
-                    </div>
-                </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <livewire:search-dropdown></livewire:search-dropdown>
                 <div class="ml-4">
                     <a href="#">
                         <img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8 h-8">
@@ -64,8 +61,8 @@
             </div>
         </div>
     </nav>
-    @yield('content')
 
+    @yield('content')
     @livewireScripts
 </body>
 

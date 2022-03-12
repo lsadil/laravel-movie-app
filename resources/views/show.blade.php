@@ -7,7 +7,7 @@
             <div class="md:ml-24">
                 <h2 class="text-4xl font-semibold mt-2">{{ $movieDetails['title'] }}</h2>
                 <div class="flex flex-wrap items-center text-gray-400 text-sm mt-6 md:mt-2">
-                    <x-eos-star class="fill-current text-orange-500 w-5" />
+                    <x-eos-star class="fill-current text-teal-500 w-5" />
                     <span class="ml-1">{{ $movieDetails['vote_average'] * 10 }}%</span>
                     <span class="mx-2">|</span>
                     <span>{{ \Carbon\Carbon::parse($movieDetails['release_date'])->format('M d, Y') }}</span>
@@ -37,14 +37,14 @@
                 </div>
                 <div class="flex mt-12">
                     <a href="https://youtube.com/watch?v={{ $trailer }}"
-                        class=" inline-flex items-center bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4
-                        hover:bg-orange-600 transition ease-in-out duration-200">
+                        class=" inline-flex items-center bg-teal-500 text-gray-900 rounded font-semibold px-5 py-4
+                        hover:bg-teal-600 transition ease-in-out duration-200">
                         <x-eos-play-circle class="w-6 fill-current" />
                         <span class="ml-2 font-semibold">Play Trailer</span>
                     </a>
                     <a href="https://www.imdb.com/title/{{ $movieDetails['imdb_id'] }}"
-                        class="flex items-center ml-6 bg-orange-500 text-gray-900 rounded font-semibold px-5 py-4
-                    hover:bg-orange-600 transition ease-in-out duration-200">
+                        class="flex items-center ml-6 bg-teal-500 text-gray-900 rounded font-semibold px-5 py-4
+                    hover:bg-teal-600 transition ease-in-out duration-200">
                         <x-fab-imdb class="w-6 fill-current" />
                         <span class="ml-2 font-semibold">IMDb</span>
                     </a>
@@ -93,7 +93,6 @@
                         </div>
                     @endif
                 @endforeach
-
             </div>
         </div>
     </div>
