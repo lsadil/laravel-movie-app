@@ -1,7 +1,7 @@
 
 ## Laravel Movie App
 
-A basic movie app using TMDB's API
+An IMDB clone app using TMDB's API and TALL stack
 
 <!-- - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
